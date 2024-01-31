@@ -23,7 +23,7 @@
 
 .book-ticket-btn {
     background-color: #dd003f;
-    color: black;
+    color: white;
     /* width: fit-content; */
     padding: 10px 0px;
     border: none;
@@ -59,6 +59,7 @@
 }
 
 .schedule-container {
+    margin: 8px 0;
     display: flex;
     justify-items: center;
     gap: 12px;
@@ -66,9 +67,15 @@
 .schedule{
     width: fit-content;
     padding: 10px 16px;
-    background-color: #dd003f;
-    color: white;
+    background-color: rgba(220,248,54,255);
+    color: black;
     border-radius: 12px;
+}
+
+.schedule-heading {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
 }
 
 .schedule-time {
@@ -82,3 +89,85 @@
     font-weight: 600;
     color: #00a2f9;
 }
+
+
+.rating-container {
+ display: flex;
+ justify-items: center;
+ gap: 13px;
+}
+.rating-container .icon-rating {
+    font-size: 20px;
+    color: #dd003f;
+}
+.rating-container .rating-point{
+    font-size: 14px;
+    color: black;
+    
+    }
+.rating-container .rating-point span {
+font-size: 20px;
+
+}
+.genres-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+}
+.genres {
+    width: fit-content;
+    background-color: #dfdddd;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 18px;
+}
+.network {
+    
+}
+.network h5 {
+    font-size: 18px;
+    color:  black;
+    font-weight: 700;
+}
+.network h4 {
+    font-size: 14px;
+}
+.network span {
+    font-weight: 600;
+    
+}
+
+.network-details-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+
+@media (max-width: 767px) {
+    .details-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+.details-main-container{
+    padding: 10px;
+}
+.rating-container {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+    /* Additional styles for small screens */
+  }
+  
+  /* Responsive styles for screens between 768px and 991px (e.g., tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    /* Additional styles for medium screens */
+  }
+  

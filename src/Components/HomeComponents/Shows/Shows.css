@@ -27,7 +27,6 @@
 .show-card-ratting{
     position: absolute;
     display: flex;
-    align-items: center;
     justify-items: center;
     gap: 8px;
     bottom: 8px;
@@ -37,7 +36,7 @@
     padding: 4px 16px;
 }
 .show-card-ratting-icon{
-color: #fff700;
+color: #dd003f;
 font-size: 20px;
 }
 .show-card-ratting h4{
@@ -141,3 +140,7 @@ font-size: 20px;
     /* Additional styles for medium screens */
   }
   
+
+  .more-information-container div {
+    margin-top: 12px;
+  }
