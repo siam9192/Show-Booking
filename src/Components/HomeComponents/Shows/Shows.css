@@ -1,7 +1,7 @@
 .shows-container{
     background-color: white;
     padding: 20px;
-    margin-top: 40px;
+    margin: 40px 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 8px;
 }
@@ -17,10 +17,33 @@
     border-radius: 8px;
     /* border: solid 2px #767575; */
 }
+
 .show-card-image-container{
     max-height: 370px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
+}
+.show-card-ratting{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+    bottom: 8px;
+    left: 4px;
+    background-color: rgba(39, 38, 38, 0.639);
+    border-radius: 8px;
+    padding: 4px 16px;
+}
+.show-card-ratting-icon{
+color: #fff700;
+font-size: 20px;
+}
+.show-card-ratting h4{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
 }
 .show-card img {
     width: 100%;
@@ -64,20 +87,57 @@
   
 }
 
+.show-card-status {
+   
+    color: #3090ff;
+    width: fit-content;
+    height: fit-content;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 15px;
+
+}
+
 /* show card redirect button customize */
 .show-card-button-container{
     display: flex;
-    justify-content: end;
-   
+    justify-content: space-between;
+    justify-items: center;
 }
 .show-card-button-container button{
    padding: 8px 13px;
-   background-color: black;
-   color: white;
-   border:none;
+   background-color: transparent;
+   color: black;
+   border:solid 2px #262626;
    border-radius: 50%;
    font-size: 25px;
 }
 .show-card-button-container button:hover{
-    background-color: rgb(75, 249, 214);
+    background-color: black;
+    color: white;
+    /* transition: cubic-bezier(0.6, -0.28, 0.735, 0.045); */
+    transition: all cubic-bezier(0.65,0,.076,1) 0.45s ease;
 }
+
+
+@media (max-width: 767px) {
+    .shows-card-container{
+        padding: 20px 0px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    /* Additional styles for small screens */
+  }
+  
+  /* Responsive styles for screens between 768px and 991px (e.g., tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .shows-card-container{
+        padding: 20px 0px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    /* Additional styles for medium screens */
+  }
+  

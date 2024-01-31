@@ -1,0 +1,84 @@
+.details-main-container{
+    background-color: white;
+    padding: 20px;
+    margin: 40px 0;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+    border-radius: 8px;
+
+}
+.details-container {
+    display: flex;
+    gap: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+.image-container img {
+    max-height: 500px;
+    border-radius: 8px;
+}
+
+.book-ticket-btn {
+    background-color: #dd003f;
+    color: black;
+    /* width: fit-content; */
+    padding: 10px 0px;
+    border: none;
+    border-radius: 8px;
+}
+
+.main-details{
+    display: flex ;
+    flex-direction: column;
+    gap: 12px;
+
+}
+.details-extra-info {
+    display: flex;
+    justify-items: center;
+    gap: 12px;
+}
+.details-extra-info .show-type{
+    background-color: #dde8f8;
+    color:#5778d2;
+    font-size: 12px;
+    padding: 4px 16px ;
+    border-radius: 15px;
+    width: fit-content;
+}
+.details-extra-info .show-language{
+    background-color: #ffefef;
+    color:#f4576a;
+    font-size: 12px;
+    padding: 4px 16px ;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.schedule-container {
+    display: flex;
+    justify-items: center;
+    gap: 12px;
+}
+.schedule{
+    width: fit-content;
+    padding: 10px 16px;
+    background-color: #dd003f;
+    color: white;
+    border-radius: 12px;
+}
+
+.schedule-time {
+    font-size: 14px;
+    margin-top: 12px;
+    color: black;
+   
+}
+.schedule-time span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00a2f9;
+}
