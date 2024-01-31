@@ -1,0 +1,83 @@
+.shows-container{
+    background-color: white;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 8px;
+}
+.shows-card-container{
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.show-card{
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    /* border: solid 2px #767575; */
+}
+.show-card-image-container{
+    max-height: 370px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.show-card img {
+    width: 100%;
+    height: 370px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+}
+.show-card:hover img {
+   transform: scale(1.2);
+}
+.show-card-text-container{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.show-card-text-container h3 {
+    font-size: 25px;
+    color: black;
+}
+.show-card-text-container div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.show-card-text-container .show-type  {
+    background-color: #dde8f8;
+    color:#5778d2;
+    font-size: 12px;
+    padding: 4px 16px ;
+    border-radius: 15px;
+    width: fit-content;
+}
+.show-language{
+    background-color: #ffefef;
+    color:#f4576a;
+    font-size: 12px;
+    padding: 4px 16px ;
+    border-radius: 15px;
+    width: fit-content;
+  
+}
+
+/* show card redirect button customize */
+.show-card-button-container{
+    display: flex;
+    justify-content: end;
+   
+}
+.show-card-button-container button{
+   padding: 8px 13px;
+   background-color: black;
+   color: white;
+   border:none;
+   border-radius: 50%;
+   font-size: 25px;
+}
+.show-card-button-container button:hover{
+    background-color: rgb(75, 249, 214);
+}
