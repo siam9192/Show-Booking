@@ -8,6 +8,8 @@ const ShowCard = ({show}) => {
     const handleNavigate = (id)=>{
         navigate(`/show/details/${id}`)
     }
+
+    console.log( show?.show?.webChannel)
     return (
         <div className='show-card'>
            <div className='show-card-image-container'>

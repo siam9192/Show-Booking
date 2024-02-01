@@ -136,9 +136,11 @@ font-size: 20px;
 }
 .network h4 {
     font-size: 14px;
+    color: #3c3c3c;
 }
 .network span {
     font-weight: 600;
+    color: black;
     
 }
 
@@ -147,6 +149,25 @@ font-size: 20px;
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
+}
+.web-channel-container{
+
+}
+.web-channel-container h5 {
+ font-size: 18px;
+}
+.web-channel {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 18px;
+
+}
+
+.web-channel span {
+    font-size: 16px;
+      
 }
 
 
