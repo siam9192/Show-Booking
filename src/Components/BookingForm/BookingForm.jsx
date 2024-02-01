@@ -69,12 +69,15 @@ const BookingForm = ({isBookingForm,show,handleBookingForm}) => {
                 </div>
 
                 <div className='booking-form-input-container'>
-                   <select name="schedule" id="" defaultChecked>
+               <div className='schedule-container'>
+               <select name="schedule" id="" defaultChecked>
                     <option value="">Select Schedule</option>
                     {
                         show?.show?.schedule?.days.map((item,index)=><option value={item} key={index}>{item}</option>)
                     }
                    </select>
+                   <p>Time : {show?.show?.schedule.time}</p>
+               </div>
                    <input type="text" name='name'  className='' placeholder='Your Full Name' required/>
                    <input type="text" name='email' className='' placeholder='Email' required/>
                    <input type="text" name='phone' className='' placeholder='Phone' required/>

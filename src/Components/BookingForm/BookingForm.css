@@ -55,7 +55,7 @@
     padding: 30px 0 0 0;
 }
 
-.booking-form-input-container  input,select  {
+.booking-form-input-container  input  {
  width: 100%;
  margin-top: 10px;
  padding: 12px 8px;
@@ -63,6 +63,19 @@
  border-radius: 8px;
  outline: none;
 }
+.booking-form-input-container .schedule-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.booking-form-input-container  select{
+    padding: 8px 4px;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 10px;
+}
+
 
 .booking-btn-container {
     margin-top: 10px;
