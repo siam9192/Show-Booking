@@ -11,9 +11,9 @@ const ShowCard = ({show}) => {
     return (
         <div className='show-card'>
            <div className='show-card-image-container'>
-           <img src={show.show.image?.original||show.show.image?.medium}   />
+           <img src={show.show.image?.original||show.show.image?.medium}    />
          {
-            show.show.rating.average &&   <div className='show-card-ratting'><div><HiStar className='show-card-ratting-icon'></HiStar></div><div><h4>{show.show.rating.average||0}</h4></div></div>
+            show.show.rating.average &&   <div className='show-card-ratting'><div><HiStar className='show-card-ratting-icon'></HiStar></div><h4>{show.show.rating.average||0}</h4></div>
          }
            </div>
             <div className='show-card-text-container'>
@@ -24,7 +24,7 @@ const ShowCard = ({show}) => {
                 </div>
                 <div className='show-card-button-container'>
                     <div className='show-card-status'>{''}</div>
-                    <button><GoArrowUpRight onClick={()=>handleNavigate(show.show.id)}></GoArrowUpRight></button>
+                    <div className='btn' onClick={()=>handleNavigate(show.show.id)}><GoArrowUpRight ></GoArrowUpRight></div>
                 </div>
             </div>
         </div>

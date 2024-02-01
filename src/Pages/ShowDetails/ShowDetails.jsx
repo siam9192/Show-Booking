@@ -9,6 +9,7 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 import { IoStarHalfOutline } from "react-icons/io5";
 import WidthContainer from '../../Components/WidthContainer/WidthContainer';
 import BookingForm from '../../Components/BookingForm/BookingForm';
+import { Toaster } from 'react-hot-toast';
 const ShowDetails = () => {
     const [show,setShow] = useState({})
     const [isBookingForm,setIsBookingForm] = useState(false);
@@ -24,18 +25,20 @@ const ShowDetails = () => {
             setShow(findShow)
           
            summaryRef.current.innerHTML = `${findShow.show.summary}`
+           window.scrollTo(0,0)
         })
-    },[summaryRef])
-    const handleBookingForm = ()=>{
-        setIsBookingForm(!isBookingForm)
+    },[])
+    const handleBookingForm = (value)=>{
+        setIsBookingForm(value)
     }
+    
     return (
         <div className='details-main-container'>
        <WidthContainer>
        <div className='details-container'>
               <div className='image-container'>
-              <img src={show?.show?.image.original} alt="" />
-              <button className='book-ticket-btn' onClick={(handleBookingForm)}>Book Ticket</button>
+              <img src={show?.show?.image ? show?.show?.image.original||show?.show?.image.medium: ''} alt={show?.show?.name} />
+              <button className='book-ticket-btn' onClick={()=>handleBookingForm(true)}>Book Ticket</button>
               </div>
 
                 <div className='main-details'>
@@ -44,7 +47,8 @@ const ShowDetails = () => {
                     <div className='show-type'>{show?.show?.type}</div>
                     <div className='show-language'>{show?.show?.language}</div>
                 </div>
-          <div className='rating-container'>
+      {
+        show?.show?.rating.average &&     <div className='rating-container'>
         <div>
         <Rating
         stop={10}
@@ -56,9 +60,10 @@ const ShowDetails = () => {
         </div>
         <h4 className='rating-point'><span>{show?.show?.rating.average}</span> Out of 10</h4>
           </div>
+      }
                     <p ref={summaryRef}></p>
                     <div >
-                  <div style={{display:'flex',justifyItems:'center',gap:'12px'}}>
+                  <div style={{display:'flex',alignItems:'center',gap:'12px'}}>
                   <div style={{color:'#dd003f', fontSize:'20px'}}><BsClockHistory></BsClockHistory>  </div> <h4 className='schedule-heading'>Available Schedule</h4>
                   </div>
                         <div className='schedule-container'>
@@ -80,7 +85,7 @@ const ShowDetails = () => {
                      show?.show?.genres.map((item,index)=><div className='genres'>
                           {item}
                      </div>)
-                     }
+                     } 
                     </div>
                     </div>
                     <div className='network'><h5>Network:</h5>
@@ -98,7 +103,11 @@ const ShowDetails = () => {
             </div>
             
        </WidthContainer>
-    <BookingForm isBookingForm={isBookingForm} show={show}></BookingForm>
+    <BookingForm isBookingForm={isBookingForm} handleBookingForm={handleBookingForm} show={show}></BookingForm>
+    <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
         </div>
     );
 }

@@ -1,23 +1,29 @@
 .details-main-container{
-    background-color: white;
+  
     padding: 20px;
     margin: 40px 0;
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
-    border-radius: 8px;
+  
 
 }
 .details-container {
     display: flex;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
     gap: 20px;
 }
 
 .image-container {
     display: flex;
     flex-direction: column;
-    gap: 16px
+    gap: 16px;
+   
+    min-width: 20%;
 }
 .image-container img {
     max-height: 500px;
+    min-height: 350px;
     border-radius: 8px;
 }
 
@@ -59,10 +65,7 @@
 }
 
 .schedule-container {
-    margin: 8px 0;
-    display: flex;
-    justify-items: center;
-    gap: 12px;
+   margin-top: 10px;
 }
 .schedule{
     width: fit-content;
@@ -73,7 +76,7 @@
 }
 
 .schedule-heading {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
     color: black;
 }
